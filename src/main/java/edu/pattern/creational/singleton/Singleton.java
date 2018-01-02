@@ -1,13 +1,17 @@
 package edu.pattern.creational.singleton;
 
 public class Singleton {
-    private static Singleton _instance = null;
+    private volatile static Singleton instance;
 
     private Singleton() {}
 
-    public static synchronized Singleton getInstance() {
-        if (_instance == null)
-            _instance = new Singleton();
-        return _instance;
+    public static Singleton getInstance() {
+        if (instance == null) {
+            synchronized (Singleton.class) {
+                if (instance == null)
+                    instance = new Singleton();
+            }
+        }
+        return instance;
     }
 }
