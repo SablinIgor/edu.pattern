@@ -7,3 +7,15 @@ public abstract class SquadronFactory {
 
     public abstract Warrior createWarrior();
 }
+
+interface Archer {
+    public void shoot();
+}
+
+interface Warrior {
+    public void attack();
+}
+
+interface Mage {
+    public void cast();
+}

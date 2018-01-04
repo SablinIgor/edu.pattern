@@ -13,3 +13,21 @@ public class ElfSquadronFactory extends SquadronFactory {
         return new ElfWarrior();
     }
 }
+
+class ElfMage implements Mage {
+    public void cast() {
+        // использовать магию эльфов
+    }
+}
+
+class ElfWarrior implements Warrior {
+    public void attack() {
+        // использовать меч эльфов
+    }
+}
+
+class ElfArcher implements Archer {
+    public void shoot() {
+        // использовать лук эльфов
+    }
+}
