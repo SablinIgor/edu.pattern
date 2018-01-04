@@ -16,18 +16,18 @@ public class ElfSquadronFactory extends SquadronFactory {
 
 class ElfMage implements Mage {
     public void cast() {
-        // использовать магию эльфов
+        System.out.println("Elf magic!");
     }
 }
 
 class ElfWarrior implements Warrior {
     public void attack() {
-        // использовать меч эльфов
+        System.out.println("Elf sword attack!");
     }
 }
 
 class ElfArcher implements Archer {
     public void shoot() {
-        // использовать лук эльфов
+        System.out.println("Elf archer attack!");
     }
 }

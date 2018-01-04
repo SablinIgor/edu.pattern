@@ -16,11 +16,24 @@ class GetCharacters{
 public class FantasyFactory {
 
     public static void main(String[] args){
-        GetCharacters ElfSquad = new GetCharacters();
-        ElfSquad.createSquadron(new ElfSquadronFactory());
+        GetCharacters elfSquad = new GetCharacters();
 
-        ElfSquad.mage.cast();
-        ElfSquad.archer.shoot();
-        ElfSquad.warrior.attack();
+        if (elfSquad.mage == null){
+            System.out.println("Empty");
+        } else {
+            System.out.println("Ready");
+        }
+            ;
+        elfSquad.createSquadron(new ElfSquadronFactory());
+
+        if (elfSquad.mage == null){
+            System.out.println("Empty");
+        } else {
+            System.out.println("Ready");
+        }
+
+        elfSquad.mage.cast();
+        elfSquad.archer.shoot();
+        elfSquad.warrior.attack();
     }
 }
